@@ -1,0 +1,258 @@
+/* import fonts link */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@600;700;800&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap");
+
+@font-face {
+  font-family: "Raghen script";
+  src: url(/font/Raghen\ Script.ttf);
+}
+
+/* selection */
+::selection {
+  color: #33677b;
+}
+/* global resets */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* custom properties */
+:root {
+  /* color */
+  --bluegreen: #08fdd8;
+  --black: #000;
+  --white: #fff;
+  --backgroundcolor: #1d1d1d;
+  /* tint */
+  --tint-100: #cefff7;
+  --tint-200: #b5fef3;
+  --tint-300: #9cfeef;
+  --tint-400: #84feec;
+  --tint-500: #6bfee8;
+  --tint-600: #52fee4;
+  --tint-700: #39fde0;
+  --tint-800: #21fddc;
+  --tint-900: #08fdd8;
+
+  /* shade */
+  --shade-50: #08fdd8;
+  --shade-100: #07e4c2;
+  --shade-200: #06caad;
+  --shade-300: #06b197;
+  --shade-400: #059882;
+  --shade-500: #047f6c;
+  --shade-600: #036556;
+  --shade-700: #024c41;
+  --shade-800: #02332b;
+  --shade-900: #011916;
+  /* rest of the colors */
+
+  /* fonts family*/
+  --headingfont: "open sans", sans-serif;
+  --bodyfont: "Poppins", sans-serif;
+
+  /* font weight */
+  --light-300: 300;
+  --Regular-400: 400;
+  --Medium-500: 500;
+  --Semi-bold-600: 600;
+  --Bold-700: 700;
+  --Extrabold-800: 800;
+
+  /* box shadow */
+
+  /* rest of the vars */
+  --borderRadius: 0.25rem;
+  --letterSpacing: 1px;
+  --transition: 0.4s ease-in-out all;
+  --max-width: 120rem;
+}
+html {
+  /* 62.5% of 16px base font size is 10px */
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+body {
+  font-family: var(--bodyfont);
+  font-weight: var(--light-300);
+  line-height: 1.3;
+  color: var(--white);
+  background-color: var(--backgroundcolor);
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+ul {
+  list-style-type: none;
+}
+b {
+  font-weight: 500;
+}
+/* *:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--white), 0 0 0 0.6rem var(--bluegreen);
+} */
+.img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+/* resuable style */
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.8rem;
+}
+.container--2 {
+  width: 100%;
+  max-width: 105rem;
+  margin: 0 auto;
+  padding: 0 1.8rem;
+}
+/* buttons */
+
+.btn {
+  font-size: 1.6rem;
+  font-weight: var(--Regular-400);
+  cursor: pointer;
+  color: var(--white);
+  text-align: center;
+  border: transparent;
+  border-radius: var(--borderRadius);
+  letter-spacing: var(--letterSpacing);
+
+  transition: var(--transtion);
+  text-transform: capitalize;
+  display: inline-block;
+}
+
+/* heading */
+.primary-heading,
+.secondry-heading,
+.about-heading {
+  font-family: var(--headingfont);
+  letter-spacing: var(--letterSpacing);
+  text-transform: uppercase;
+  font-weight: var(--Extrabold-800);
+}
+.primary-heading {
+  font-size: clamp(2.2rem, 1.3333rem + 2.8889vw, 4.8rem);
+  text-align: center;
+  margin-bottom: 1.6rem;
+}
+.secondry-heading {
+  font-size: clamp(2.4rem, 2.1333rem + 0.8889vw, 3.2rem);
+  text-align: center;
+  color: var(--bluegreen);
+  margin-bottom: 1.6rem;
+}
+.about-heading {
+  font-size: clamp(2.4rem, 1.95rem + 1.5vw, 3.6rem);
+  color: var(--white);
+  margin-bottom: 1rem;
+}
+/* card text  */
+.card-text {
+  font-size: clamp(1.6rem, 1.5333rem + 0.2222vw, 1.8rem);
+  font-size: 1.6rem;
+  line-height: 1.6;
+  margin-bottom: 2.8rem;
+  text-align: center;
+}
+/* flex */
+.flex {
+  display: flex;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
+.flex--fd {
+  flex-direction: column;
+}
+.flex--sb {
+  justify-content: space-between;
+}
+.black {
+  color: var(--black) !important;
+}
+
+/* *********** */
+/* preloader */
+/* *********** */
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10000;
+  background-color: #000;
+  overflow: hidden;
+  pointer-events: none;
+  opacity: 1;
+  transition: 0.5s ease-in;
+}
+.preloader::-webkit-scrollbar {
+  width: 0 !important;
+}
+.preloader:active {
+  opacity: 0;
+}
+svg {
+  max-width: 10rem;
+  height: auto;
+  margin: 0 auto;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.5s ease-in;
+}
+.preloader p {
+  font-size: clamp(1.8rem, 1.6rem + 0.6667vw, 2.4rem);
+  color: var(--shade-100);
+  position: absolute;
+  top: 62%;
+  left: 50%;
+  transform: translate(-50%, -38%);
+}
+
+/* *********** */
+/* back to top  */
+/* *********** */
+#up-down {
+  display: none;
+  position: fixed;
+  bottom: 2rem;
+  right: 3rem;
+  z-index: 999;
+  border: none;
+  outline: none;
+  background: none;
+  color: var(--bluegreen);
+  cursor: pointer;
+}
+
+#up-down:hover {
+  color: var(--shade-100);
+}
+
+/* ******* */
+/* page wrapper */
+/* ******* */
+.page-showcase {
+  max-width: 120rem;
+  width: 100%;
+  margin: 2rem auto;
+  padding-bottom: 4.8rem;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.37);
+  border-radius: 10px;
+  overflow: hidden;
+}

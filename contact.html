@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- import favicon link -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/favicon_io (1)/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/favicon_io (1)/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/favicon_io (1)/favicon-16x16.png"
+    />
+    <link rel="manifest" href="assets/favicon_io (1)/site.webmanifest" />
+    <!-- fontawesome cdn -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Contatc Us</title>
+  </head>
+  <body>
+     <div class="container">
+    <div class="page-showcase">
+      
+        <!--container  -->
+        <div class="cta-header">
+        <div class="container--2 flex flex--sb">
+          <!-- site logo -->
+          <a href="index.html" class="logo">Abid.</a>
+            
+          
+
+          <!-- header icon -->
+          <ul class="cta-header-list flex">
+            <li>
+              <a href="contact.html"><i class="fas fa-redo fa-2x"></i></a>
+            </li>
+
+            <li>
+              <a href="index.html"><i class="fas fa-times fa-3x"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!--cta section  -->
+      <section>
+        <div class="container--2">
+          <!-- cta heading -->
+          <h2 class="secondry-heading ">let's chat</h2>
+          <!-- cta text -->
+          <p class="cta-text">We would love to learn about your project.</p>
+         
+
+          <!--img  -->
+          <div class="cta-img img">
+            <img src="assets/avataaars.svg" alt="contact avataar image">
+          </div>
+         
+
+            <!-- form -->
+              <form action="https://formspree.io/f/xnqwzyvz" method="post">
+                <!-- name -->
+                <label for="name">Full Name</label>
+                <input type="text" id="name" placeholder="Your Name" required />
+                <!-- email -->
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Your Email" required />
+                <!-- project -->
+                <label for="project">Type of project</label>
+                <select name="project" id="project" required>
+                  <option style="display: none"></option>
+                  <option value="webdevelopment">Web development</option>
+                  <option value="wordpress">Wordpress</option>
+                  <option value="adobexd">Adobe Xd</option>
+                </select>
+                <!-- subject -->
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" placeholder="Subject" />
+                <!--message  -->
+                <label for="message">Additional details</label>
+                <textarea
+                  name="meassge"
+                  id="message"
+                  cols="10"
+                  rows="5" required
+                ></textarea>
+                <!-- btn -->
+               <button class="btn btn--submit" type="submit" >Send Message!</button> 
+              </form>
+         </section>
+        </div>
+        </div>
+  </body>
+</html>
